@@ -186,7 +186,7 @@ function Navbar({
           >
             <span className="relative block h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-gold/50 transition-transform duration-500 group-hover:scale-105 sm:h-10 sm:w-10">
               <img
-                src="/images/logo.jpg"
+                src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80"
                 alt=""
                 width={40}
                 height={40}
