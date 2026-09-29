@@ -1,3 +1,24 @@
+import { menuImageChunk1 } from "./menu-images-1";
+import { menuImageChunk2 } from "./menu-images-2";
+import { menuImageChunk3 } from "./menu-images-3";
+import { menuImageChunk4 } from "./menu-images-4";
+import { menuImageChunk5 } from "./menu-images-5";
+import { menuImageChunk6 } from "./menu-images-6";
+import { menuImageChunk7 } from "./menu-images-7";
+import { menuImageChunk8 } from "./menu-images-8";
+import { NIKETA_REAL_PHOTOS, REAL_SPICES_BG } from "./brand-images";
+
+const MENU_IMAGE_MAP: Record<string, string> = {
+  ...menuImageChunk1,
+  ...menuImageChunk2,
+  ...menuImageChunk3,
+  ...menuImageChunk4,
+  ...menuImageChunk5,
+  ...menuImageChunk6,
+  ...menuImageChunk7,
+  ...menuImageChunk8,
+};
+
 export const PHONE_DISPLAY = "+91 95471 96455";
 export const PHONE_TEL = "+919547196455";
 export const WA_NUMBER = "919734794901";
@@ -59,7 +80,7 @@ const menuImages = [
   "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=82",
 ] as const;
 
-const menuImage = (name: string, _category: string) => menuImages[slug(name).length % menuImages.length];
+const menuImage = (name: string, _category: string) => MENU_IMAGE_MAP[slug(name)] ?? REAL_SPICES_BG;
 
 const withImages = (category: string, items: MenuItem[]) =>
   items.map((i) => ({ ...i, img: i.img ?? menuImage(i.name, category) }));
@@ -369,14 +390,14 @@ export interface GalleryItem {
 }
 
 export const gallery: GalleryItem[] = [
-  { img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=82", title: "The Dining Room", tag: "Ambience", ratio: "3 / 4" },
-  { img: "https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=1200&q=82", title: "Fire & Wok", tag: "Chinese Kitchen", ratio: "4 / 3" },
-  { img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=82", title: "From the Tandoor", tag: "Live Fire", ratio: "3 / 4" },
-  { img: "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1200&q=82", title: "Slow Dum", tag: "Signature", ratio: "4 / 5" },
-  { img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=82", title: "Wok-Tossed Hakka", tag: "Chinese Kitchen", ratio: "3 / 4" },
-  { img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=82", title: "The Spice Library", tag: "Our Craft", ratio: "4 / 3" },
-  { img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=82", title: "Sweet Endings", tag: "Desserts", ratio: "3 / 4" },
-  { img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=82", title: "House Starters", tag: "Appetisers", ratio: "4 / 5" },
+  { img: NIKETA_REAL_PHOTOS[0], title: "The Dining Room", tag: "Ambience", ratio: "3 / 4" },
+  { img: NIKETA_REAL_PHOTOS[1], title: "Restaurant Niketa", tag: "Real Interior", ratio: "4 / 3" },
+  { img: NIKETA_REAL_PHOTOS[2], title: "Kitchen & Food", tag: "Our Craft", ratio: "3 / 4" },
+  { img: NIKETA_REAL_PHOTOS[3], title: "Signature Dishes", tag: "Cuisine", ratio: "4 / 5" },
+  { img: NIKETA_REAL_PHOTOS[4], title: "Dining at Niketa", tag: "Ambience", ratio: "3 / 4" },
+  { img: NIKETA_REAL_PHOTOS[5], title: "From Our Kitchen", tag: "Food", ratio: "4 / 3" },
+  { img: NIKETA_REAL_PHOTOS[6], title: "Fresh Ingredients", tag: "Our Craft", ratio: "3 / 4" },
+  { img: NIKETA_REAL_PHOTOS[7], title: "Contai Landmark", tag: "Restaurant Niketa", ratio: "4 / 5" },
 ];
 
 /* ------------------------------ reviews ------------------------------ */
