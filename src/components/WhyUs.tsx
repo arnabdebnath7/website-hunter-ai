@@ -73,7 +73,7 @@ function WhyUs() {
           <Reveal delay={0.22} className="sm:row-span-2">
             <figure className="group relative h-full min-h-[280px] overflow-hidden rounded-2xl border border-cream/[0.06]">
               <img
-                src="/images/gallery/spices.jpg"
+                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=84"
                 alt="The spice library of the Niketa kitchen"
                 loading="lazy"
                 decoding="async"
