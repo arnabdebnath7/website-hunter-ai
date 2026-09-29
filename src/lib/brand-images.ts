@@ -14,4 +14,4 @@ export const NIKETA_REAL_PHOTOS = [
   "https://img02.restaurantguru.com/ce04-Restaurant-Niketa-Contai-meat-1.jpg"
 ] as const;
 
-export const REAL_SPICES_BG = "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1800&q=88";
+export const REAL_SPICES_BG = "https://img02.restaurantguru.com/c9c8-dishes-Restaurant-Niketa.jpg";
