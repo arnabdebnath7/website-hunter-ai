@@ -69,17 +69,6 @@ const item = (
   options: Pick<MenuItem, "price2" | "img" | "badge" | "desc"> = {}
 ): MenuItem => ({ id: slug(name), name, price, veg, ...options });
 
-const menuImages = [
-  "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=82",
-  "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=82",
-] as const;
-
 const menuImage = (name: string, _category: string) => MENU_IMAGE_MAP[slug(name)] ?? REAL_SPICES_BG;
 
 const withImages = (category: string, items: MenuItem[]) =>
