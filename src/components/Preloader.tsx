@@ -24,7 +24,7 @@ export default function Preloader({ show }: { show: boolean }) {
               className="relative"
             >
               <span className="block h-24 w-24 overflow-hidden rounded-full ring-1 ring-gold/50 sm:h-28 sm:w-28">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80" alt="Restaurant Niketa" className="h-full w-full object-cover" />
+                <img src="NIKETA_LOGO_DATA_URL" alt="Restaurant Niketa" className="h-full w-full object-cover" />
               </span>
               <motion.span
                 initial={{ scale: 0.7, opacity: 0 }}
