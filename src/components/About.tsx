@@ -1,4 +1,5 @@
 import { memo, useEffect, useRef, useState } from "react";
+import { NIKETA_LOGO_DATA_URL, NIKETA_REAL_PHOTOS } from "../lib/brand-images";
 import { useInView, useReducedMotion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import { Reveal, Eyebrow } from "./Reveal";
@@ -130,7 +131,7 @@ function About({ onReserve }: { onReserve: () => void }) {
             <div className="absolute -inset-3 rounded-3xl border border-gold/15 sm:-inset-4" aria-hidden="true" />
             <div className="relative overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=1200&q=84"
+                src="NIKETA_REAL_PHOTOS[1]"
                 alt="The warm, candle-lit dining room of Restaurant Niketa"
                 loading="lazy"
                 decoding="async"
@@ -141,7 +142,7 @@ function About({ onReserve }: { onReserve: () => void }) {
             </div>
             <div className="glass-deep animate-floaty absolute -bottom-7 right-5 flex items-center gap-4 rounded-2xl px-5 py-4 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.8)] sm:right-8">
               <span className="block h-14 w-14 overflow-hidden rounded-full ring-1 ring-gold/60">
-                <img src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80" alt="" width={56} height={56} className="h-full w-full object-cover" />
+                <img src="NIKETA_LOGO_DATA_URL" alt="" width={56} height={56} className="h-full w-full object-cover" />
               </span>
               <span>
                 <span className="block font-display text-xl font-semibold leading-none text-cream">
