@@ -23,7 +23,7 @@ function priceText(item: MenuItem) {
 }
 
 function dishImg(item: DisplayItem) {
-  return item.img ?? "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=82";
+  return item.img ?? REAL_SPICES_BG;
 }
 
 function LeafLine({ flip = false }: { flip?: boolean }) {
