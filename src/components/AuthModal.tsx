@@ -99,7 +99,7 @@ function AuthModal({
             </div>
 
             <span className="mx-auto -mt-4 block h-16 w-16 overflow-hidden rounded-full ring-1 ring-gold/50">
-              <img src="/images/logo.jpg" alt="Restaurant Niketa" className="h-full w-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80" alt="Restaurant Niketa" className="h-full w-full object-cover" />
             </span>
             <h3 id="auth-title" className="mt-5 font-display text-3xl font-semibold text-cream">
               Welcome to <span className="italic text-gold-grad">Restaurant Niketa</span>
