@@ -2,6 +2,7 @@ import { memo, useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Check, ChevronLeft, ChevronRight, Plus, Search, X } from "lucide-react";
 import { Reveal, easeLux } from "./Reveal";
+import { REAL_SPICES_BG } from "../lib/brand-images";
 import { favourites, menuCategories, type MenuItem } from "../lib/data";
 
 type MenuTab = "favourites" | string;
