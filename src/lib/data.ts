@@ -48,7 +48,18 @@ const item = (
   options: Pick<MenuItem, "price2" | "img" | "badge" | "desc"> = {}
 ): MenuItem => ({ id: slug(name), name, price, veg, ...options });
 
-const menuImage = (name: string, _category: string) => `/images/generated-menu/${slug(name)}.jpg`;
+const menuImages = [
+  "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=82",
+  "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=82",
+] as const;
+
+const menuImage = (name: string, _category: string) => menuImages[slug(name).length % menuImages.length];
 
 const withImages = (category: string, items: MenuItem[]) =>
   items.map((i) => ({ ...i, img: i.img ?? menuImage(i.name, category) }));
@@ -358,14 +369,14 @@ export interface GalleryItem {
 }
 
 export const gallery: GalleryItem[] = [
-  { img: "/images/gallery/interior.jpg", title: "The Dining Room", tag: "Ambience", ratio: "3 / 4" },
-  { img: "/images/gallery/wok.jpg", title: "Fire & Wok", tag: "Chinese Kitchen", ratio: "4 / 3" },
-  { img: "/images/gallery/tandoor.jpg", title: "From the Tandoor", tag: "Live Fire", ratio: "3 / 4" },
-  { img: "/images/dishes/mutton-biryani.jpg", title: "Slow Dum", tag: "Signature", ratio: "4 / 5" },
-  { img: "/images/gallery/noodles.jpg", title: "Wok-Tossed Hakka", tag: "Chinese Kitchen", ratio: "3 / 4" },
-  { img: "/images/gallery/spices.jpg", title: "The Spice Library", tag: "Our Craft", ratio: "4 / 3" },
-  { img: "/images/gallery/dessert.jpg", title: "Sweet Endings", tag: "Desserts", ratio: "3 / 4" },
-  { img: "/images/dishes/chicken-lollipop.jpg", title: "House Starters", tag: "Appetisers", ratio: "4 / 5" },
+  { img: "https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1200&q=82", title: "The Dining Room", tag: "Ambience", ratio: "3 / 4" },
+  { img: "https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=1200&q=82", title: "Fire & Wok", tag: "Chinese Kitchen", ratio: "4 / 3" },
+  { img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1200&q=82", title: "From the Tandoor", tag: "Live Fire", ratio: "3 / 4" },
+  { img: "https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=1200&q=82", title: "Slow Dum", tag: "Signature", ratio: "4 / 5" },
+  { img: "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=82", title: "Wok-Tossed Hakka", tag: "Chinese Kitchen", ratio: "3 / 4" },
+  { img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=1200&q=82", title: "The Spice Library", tag: "Our Craft", ratio: "4 / 3" },
+  { img: "https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1200&q=82", title: "Sweet Endings", tag: "Desserts", ratio: "3 / 4" },
+  { img: "https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1200&q=82", title: "House Starters", tag: "Appetisers", ratio: "4 / 5" },
 ];
 
 /* ------------------------------ reviews ------------------------------ */
