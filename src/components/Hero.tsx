@@ -113,7 +113,7 @@ function Hero({ ready }: { ready: boolean; onReserve: () => void }) {
               }}
             >
               <motion.img
-                src="/images/niketa-uploaded-hero-opt.jpg"
+                src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=88"
                 alt="Restaurant Niketa dining room interior"
                 fetchPriority="high"
                 width={1254}
@@ -134,7 +134,7 @@ function Hero({ ready }: { ready: boolean; onReserve: () => void }) {
               className="glass-deep pointer-events-none absolute right-[8%] top-[18%] z-20 flex items-center gap-2 rounded-2xl border border-gold/25 px-2.5 py-2 shadow-[0_18px_44px_-26px_rgba(0,0,0,0.78)]"
             >
               <span className="block h-8 w-8 overflow-hidden rounded-full ring-1 ring-gold/45">
-                <img src="/images/logo.jpg" alt="" width={32} height={32} className="h-full w-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80" alt="" width={32} height={32} className="h-full w-full object-cover" />
               </span>
               <span>
                 <span className="block font-display text-lg font-semibold leading-none text-cream">Restaurant Niketa</span>
