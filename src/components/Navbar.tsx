@@ -1,4 +1,5 @@
 import { memo, useEffect, useRef, useState } from "react";
+import { NIKETA_LOGO_DATA_URL } from "../lib/brand-images";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone, Sun, Moon, ShoppingBag, UserRound, LogOut } from "lucide-react";
 import { PHONE_DISPLAY, PHONE_TEL } from "../lib/data";
@@ -186,7 +187,7 @@ function Navbar({
           >
             <span className="relative block h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-gold/50 transition-transform duration-500 group-hover:scale-105 sm:h-10 sm:w-10">
               <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80"
+                src="NIKETA_LOGO_DATA_URL"
                 alt=""
                 width={40}
                 height={40}
