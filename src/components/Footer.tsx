@@ -49,7 +49,7 @@ function Footer() {
           <div>
             <a href="#home" className="flex items-center gap-3" aria-label="Restaurant Niketa — back to top">
               <span className="block h-12 w-12 shrink-0 overflow-hidden rounded-full ring-1 ring-gold/50">
-                <img src="/images/logo.jpg" alt="" width={48} height={48} className="h-full w-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7b7a9b4c1a?auto=format&fit=crop&w=160&q=80" alt="" width={48} height={48} className="h-full w-full object-cover" />
               </span>
               <span className="font-display text-xl font-semibold text-cream">
                 Restaurant Niketa
